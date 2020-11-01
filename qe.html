@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type=text/css href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<script>
+ 
+function add() {
+                var a, b, c, d, e;
+                a = Number(document.getElementById("a").value);
+
+                b = Number(document.getElementById("b").value);
+                c = Number(document.getElementById("c").value);
+
+      e= (-1 * b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a); 
+      d = (-1 * b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
+
+
+                document.getElementById("d").value = d;
+                document.getElementById("e").value = e;
+         
+}
+        
+        </script>
+		</head>
+		<body>
+			<div class="column box is-half">
+				<div>
+					<header class="card-header">
+						<p class="card-header-title">Calculate Roots of Quadratic Equations</p>
+					</header>
+				</div>
+				<div class="card-content column is-half">
+					<div class="field has-addons">
+						<p class="control">
+							<input class="input is-rounded is-primary" type="text" id="a" name="a" placeholder="x&#178;" />
+						</p>
+						<p class="control">
+							<a class="is-static button is-rounded">x&#178;</a>
+						</p>
+					</div>
+					<div class="field has-addons">
+						<p class="control">
+							<input class="input is-rounded is-primary" type="text" id="b" name="b" placeholder="x" />
+						</p>
+						<p class="control">
+							<a class="is-static button is-rounded">x</a>
+						</p>
+					</div>
+					<div class="field has-addons">
+						<p class="control">
+							<input class="input is-rounded is-primary" type="text" id="c" name="c" placeholder="(Constant)" />
+						</p>
+						<p class="control">
+							<a class="is-static button is-rounded">(Constant)</a>
+						</p>
+					</div>
+					<div class="field has-addons">
+						<p class="control">
+							<a class="is-static button is-rounded">Roots = </a>
+						</p>
+						<p class="control">
+							<input class="is-static input" type="text" id="d" placeholder="First root" />
+							<input class="is-static input" type="text" id="e" placeholder="Second root" />
+						</p>
+					</div>
+					<button class="button control has-background-info" onclick="add()">Calculate</button>
+				</div>
+			</div>
+		</body>
+	</html>

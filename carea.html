@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+<meta charset="UTF-8">
+        <link rel="stylesheet" type=text/css href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script>
+            function add() {
+                var a, d;
+                a = Number(document.getElementById("a").value);
+
+                d = (Math.PI)*(Math.pow(a, 2));
+
+                document.getElementById("d").value = d;
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="column box is-half ">
+            <div>   
+            <header class="card-header">
+                <p class="card-header-title">Calculate Area of Circle</p>
+            </header>
+
+           </div>
+            <div class="card-content column is-half">
+               
+                    <p class="control">
+                        <input class="input is-rounded is-primary" type="text" id="a" name="a" placeholder="Radius" />
+                    </p>
+
+                    <br />
+                </div>
+               
+                <div class="field has-addons">
+                    <p class="control">
+                        <a class="is-static button is-rounded">Area = </a>
+                    </p>
+                    <p class="control">
+                        <input class="is-static input" type="text" id="d" placeholder="Area" />
+                    </p>
+                </div>
+                <button class="button control has-background-info" onclick="add()">Calculate</button>
+            </div>
+        </div>
+    </body>
+</html>
